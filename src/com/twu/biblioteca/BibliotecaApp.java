@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import com.twu.biblioteca.contents.bookList;
+import com.twu.biblioteca.MenuOptions;
 
 import java.util.List;
 import java.util.Arrays;
@@ -29,8 +30,12 @@ public class BibliotecaApp {
     public static void main(String[] args) {
         // show the welcome message!
         System.out.println(greetings());
+
         //get the list of books
         getTheBooksList();
+
+        //display the menu with options
+        MenuOptions.theMenu();
 
     }
 }

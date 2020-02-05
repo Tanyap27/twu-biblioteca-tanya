@@ -34,7 +34,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BibliotecAppTest.getTheListOfBooksTest">
+  <component name="RunManager" selected="Application.BibliotecaApp">
     <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaApp" />
       <module name="biblioteca" />
@@ -112,8 +112,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BibliotecAppTest.getTheListOfBooksTest" />
         <item itemvalue="Application.BibliotecaApp" />
+        <item itemvalue="JUnit.BibliotecAppTest.getTheListOfBooksTest" />
         <item itemvalue="JUnit.BibliotecAppTest" />
         <item itemvalue="JUnit.BibliotecAppTest.test" />
         <item itemvalue="JUnit.ExampleTest" />
@@ -130,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580830759542</updated>
-      <workItem from="1580830760686" duration="12173000" />
+      <workItem from="1580830760686" duration="15361000" />
     </task>
     <servers />
   </component>
