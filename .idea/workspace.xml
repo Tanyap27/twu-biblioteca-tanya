@@ -34,7 +34,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BibliotecaApp">
+  <component name="RunManager" selected="JUnit.BibliotecAppTest.getTheListOfBooksTest">
     <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaApp" />
       <module name="biblioteca" />
@@ -59,6 +59,22 @@
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecAppTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BibliotecAppTest.getTheListOfBooksTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecAppTest" />
+      <option name="METHOD_NAME" value="getTheListOfBooksTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,6 +112,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BibliotecAppTest.getTheListOfBooksTest" />
         <item itemvalue="Application.BibliotecaApp" />
         <item itemvalue="JUnit.BibliotecAppTest" />
         <item itemvalue="JUnit.BibliotecAppTest.test" />
@@ -113,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580830759542</updated>
-      <workItem from="1580830760686" duration="3553000" />
+      <workItem from="1580830760686" duration="12173000" />
     </task>
     <servers />
   </component>
