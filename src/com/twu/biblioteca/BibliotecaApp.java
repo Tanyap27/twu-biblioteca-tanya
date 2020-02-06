@@ -18,10 +18,10 @@ public class BibliotecaApp {
     //get the options
     private static MenuOptions menuOptions = new MenuOptions(
             "Choose Option:\n" +
-                    "To open the book menu, please select 1\n" +
-                    "To checkout, select 2\n" +
-                    "To return, select 3\n" +
-                    "To quit, please select 4\n"
+                    "1. - To open the book menu, please select 1\n" +
+                    "2. - To checkout, select 2\n" +
+                    "3. - To return, select 3\n" +
+                    "4. - To quit, please select 4\n"
     );
 
     /*public static void getMenu() {
@@ -56,7 +56,7 @@ public class BibliotecaApp {
         getTheBooksList();
 
         //display the menu with options
-        MenuOptions.menuOptions();
+       // MenuOptions.menuOptions();
        // MenuOptions.theMenu();
 
 

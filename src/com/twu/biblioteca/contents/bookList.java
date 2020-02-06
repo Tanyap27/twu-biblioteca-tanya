@@ -11,8 +11,6 @@ public class bookList {
 
     private int id;
 
-    boolean isAvailable = false;
-
     //constructor to change the variable
     public bookList(String title, String author, int publicationYear, int id) {
         this.title = title;
@@ -39,16 +37,9 @@ public class bookList {
         return id;
     }
 
-    public boolean getAvailablity() {
-        return isAvailable;
-    }
-
-    public void setAvailability(boolean isAvailable) {
-        this.isAvailable = isAvailable;
-    }
     //returns details of the books
    public String toString()
     {
-        return "The details of the book are: " + title + ", " + author + ", "  + publicationYear + "," + id ;
+        return this.title + " | " + this.author + " | "  + this.publicationYear + " | " + this.id;
     }
 }

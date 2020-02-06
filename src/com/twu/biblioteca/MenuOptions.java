@@ -5,9 +5,10 @@ import com.twu.biblioteca.Items;
 
 public class MenuOptions {
 
-    private String[] options;
+    private static String[] options;
 
     public MenuOptions(String... options) {
+
         this.options = options;
     }
 
@@ -17,18 +18,18 @@ public class MenuOptions {
         }
     }
 
-    public  String getOption(int choice) {
+    public String getOption(int choice) {
         if (choice < 0 || choice > options.length) {
             return "";
         }
         return this.options[choice-1];
     }
 
-     static String getMenuOption() {
+     /*static String getMenuOption() {
 
         //to read the option
         Scanner read = new Scanner(System.in);
-        printTheOptions();
+        //printTheOptions();
         System.out.println("Select the Option");
         int reads = read.nextInt();
         return getOption(reads);
@@ -36,10 +37,10 @@ public class MenuOptions {
 
      static void bookToBeCheckedOut(){
         Scanner sc = new Scanner(System.in);
-        Items.getTheListOfBooks();
+        //Items.getTheListOfBooks();
         System.out.print("Select book from list: ");
         int in = sc.nextInt();
-        Items.bookToBeCheckedOut(in);
+        //Items.bookToBeCheckedOut(in);
     }
 
     public void menuOptions() {
@@ -49,12 +50,12 @@ public class MenuOptions {
             String menuOption = getMenuOption();
 
             if (menuOption.equals("To open the book menu, please select 1")) {
-                Items.getTheListOfBooks();
+               // Items.getTheListOfBooks();
 
             } else if (menuOption.equals("To checkout, select 2")) {
                 bookToBeCheckedOut();
 
-            } else if (menuOption.equals("To quit, please select 4")) {
+            } else if (menuOption.equals("To quit, please select 3")) {
                 System.exit(0);
 
             } else {
