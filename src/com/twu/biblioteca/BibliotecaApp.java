@@ -16,13 +16,13 @@ public class BibliotecaApp {
     //get the list of books
     public static List getTheBooksList() {
         List<bookList> listOfTheBooks = Arrays.asList(
-                new bookList("The Da Vince Code", "Dan Brown", 2000),
-                new bookList("Harry Potter", "J.K. Rowling", 2001),
-                new bookList("Shiva", "Amit Trivedi", 2002),
-                new bookList("Mythos", "Stephen Fry", 2003)
+                new bookList("The Da Vince Code", "Dan Brown", 2000, 12),
+                new bookList("Harry Potter", "J.K. Rowling", 2001, 13),
+                new bookList("Shiva", "Amit Trivedi", 2002, 14),
+                new bookList("Mythos", "Stephen Fry", 2003, 15)
         );
 
-        System.out.println(listOfTheBooks);
+        //System.out.println(listOfTheBooks);
         return listOfTheBooks;
 
     }
