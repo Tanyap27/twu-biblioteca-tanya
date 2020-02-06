@@ -10,9 +10,10 @@ public class MenuOptions {
     private static String menuOptions = "Choose Option:\n" +
             "To open the book menu, please select 1\n" +
             "To checkout, select 2\n" +
-            "To quit, please select 3\n" + "" ;
+            "To return, select 3\n" +
+            "To quit, please select 4\n" + "" ;
 
-    private static int readConsoleInput(String message) {
+    public static int readConsoleInput(String message) {
 
         //to read the option
         Scanner read = new Scanner(System.in);
@@ -33,8 +34,9 @@ public class MenuOptions {
         );
 
         //return listOfTheBooks;
-        return listOfTheBooks.stream().filter(bookList -> bookList.getAvailablity() == false).collect(Collectors.toList());
+        return listOfTheBooks.stream().filter(bookList -> !bookList.getAvailablity()).collect(Collectors.toList());
     }
+
 
     public static void bookToBeCheckedOut() {
 
@@ -43,8 +45,9 @@ public class MenuOptions {
 
         int option = readConsoleInput(message);
 
-        for(int i = 0; i < listOfTheBooks.size(); i ++){
+         for(int i = 0; i < listOfTheBooks.size(); i ++) {
             bookList bookList = listOfTheBooks.get(i);
+            System.out.println(bookList);
 
             if(bookList.getId() == option && !bookList.getAvailablity()) {
                 bookList.setAvailability(true);
@@ -56,32 +59,35 @@ public class MenuOptions {
                 return;
             }
         }
+
     }
 
 
-    private static void selectOptions(int option) {
 
-       //different menu options present
-       switch (option) {
-            case 1:
-                System.out.println(getTheBooksList());
-                break;
 
-            case 2:
-                System.out.println("Checkout a book");
-                bookToBeCheckedOut();
-                break;
+    public static void selectOptions(int option) {
 
-            case 3:
-                System.out.println ( "Exiting the application" );
-                System.exit(1);
-                break;
+        //different menu options present
+        String message = "";
+        if (option == 1) {
+            message += getTheBooksList();
 
-            default:
-                System.err.println ( "Invalid option" );
-                break;
+        } else if (option == 2) {
+            bookToBeCheckedOut();
+
+        } else if (option == 3) {
+            System.out.println("Exiting the application");
+            System.exit(1);
+
+        } else {
+            System.err.println("Invalid option");
+
+            System.out.println(message);
+
         }
+
     }
+
     public static void theMenu() {
         selectOptions(readConsoleInput(menuOptions));
     }
