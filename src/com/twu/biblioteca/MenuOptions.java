@@ -1,44 +1,73 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.contents.bookList;
 import java.util.*;
-import java.util.stream.Collectors;
+import com.twu.biblioteca.Items;
 
 public class MenuOptions {
 
-    //different options present
-    private static String menuOptions = "Choose Option:\n" +
-            "To open the book menu, please select 1\n" +
-            "To checkout, select 2\n" +
-            "To return, select 3\n" +
-            "To quit, please select 4\n" + "" ;
+    private String[] options;
 
-    public static int readConsoleInput(String message) {
+    public MenuOptions(String... options) {
+        this.options = options;
+    }
+
+    public void printTheOptions() {
+        for (int i = 0; i < options.length; i++) {
+            System.out.println(i+1 + ". " + options[i]);
+        }
+    }
+
+    public  String getOption(int choice) {
+        if (choice < 0 || choice > options.length) {
+            return "";
+        }
+        return this.options[choice-1];
+    }
+
+     static String getMenuOption() {
 
         //to read the option
         Scanner read = new Scanner(System.in);
-        System.out.println(message);
-
-        return read.nextInt() ;
+        printTheOptions();
+        System.out.println("Select the Option");
+        int reads = read.nextInt();
+        return getOption(reads);
         }
 
-
-    public static List getTheBooksList() {
-
-        //get the list of books from bookList
-        List<bookList> listOfTheBooks = Arrays.asList(
-                new bookList("The Da Vince Code", "Dan Brown", 2000, 12),
-                new bookList("Harry Potter", "J.K. Rowling", 2001, 13),
-                new bookList("Shiva", "Amit Trivedi", 2002, 14),
-                new bookList("Mythos", "Stephen Fry", 2003, 15)
-        );
-
-        //return listOfTheBooks;
-        return listOfTheBooks.stream().filter(bookList -> !bookList.getAvailablity()).collect(Collectors.toList());
+     static void bookToBeCheckedOut(){
+        Scanner sc = new Scanner(System.in);
+        Items.getTheListOfBooks();
+        System.out.print("Select book from list: ");
+        int in = sc.nextInt();
+        Items.bookToBeCheckedOut(in);
     }
 
+    public void menuOptions() {
 
-    public static void bookToBeCheckedOut() {
+        //different options present
+        while(true) {
+            String menuOption = getMenuOption();
+
+            if (menuOption.equals("To open the book menu, please select 1")) {
+                Items.getTheListOfBooks();
+
+            } else if (menuOption.equals("To checkout, select 2")) {
+                bookToBeCheckedOut();
+
+            } else if (menuOption.equals("To quit, please select 4")) {
+                System.exit(0);
+
+            } else {
+                System.out.println(menuOption);
+
+            }
+
+            System.out.println();
+        }
+
+    }
+
+    /*public static void bookToBeCheckedOut() {
 
         List<bookList> listOfTheBooks = getTheBooksList();
         String message = "Select the id of the book to be checked out\n" + listOfTheBooks.toString();
@@ -61,8 +90,6 @@ public class MenuOptions {
         }
 
     }
-
-
 
 
     public static void selectOptions(int option) {
@@ -90,6 +117,6 @@ public class MenuOptions {
 
     public static void theMenu() {
         selectOptions(readConsoleInput(menuOptions));
-    }
+    }*/
 
 }
