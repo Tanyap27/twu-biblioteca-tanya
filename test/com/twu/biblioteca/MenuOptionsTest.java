@@ -5,7 +5,6 @@ import org.junit.Test;
 
 import com.twu.biblioteca.contents.bookList;
 import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
@@ -64,4 +63,18 @@ public class MenuOptionsTest {
         item.bookToBeCheckedOut(0,item);
         assertEquals("Sorry, that book is not available\n",output.toString());
     }
+
+    @Test
+    public void shouldReturnTheBook() {
+        Items item = new Items(
+                new bookList("The Da Vince Code", "Dan Brown", 2000, 12),
+                new bookList("Harry Potter", "J.K. Rowling", 2001, 13),
+                new bookList("Shiva", "Amit Trivedi", 2002, 14),
+                new bookList("Mythos", "Stephen Fry", 2003, 15)
+        );
+        item.bookToBeCheckedOut(4,item);
+        item.bookToBeReturned("Mythos",item);
+        assertEquals("Thank you! Enjoy the book\nThank you for returning the book\n", output.toString());
+    }
+
 }

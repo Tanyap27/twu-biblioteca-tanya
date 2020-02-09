@@ -31,6 +31,9 @@ public class BibliotecaApp {
             } else if (Option.equals("To checkout a book, select 2")) {
                 MenuOptions.bookToBeCheckedOut(item);
 
+            } else if (Option.equals("To return a book, select 3")) {
+                MenuOptions.bookToBeReturned(item);
+
             } else if (Option.equals("To quit, please select 4")) {
                 System.exit(0);
 

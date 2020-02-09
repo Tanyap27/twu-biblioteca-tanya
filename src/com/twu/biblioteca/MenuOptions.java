@@ -38,12 +38,17 @@ public class MenuOptions {
 
      static void bookToBeCheckedOut(Items items){
         Scanner read = new Scanner(System.in);
-        //new BibliotecaApp().getTheBooksList();
-         items.printTheListOfBooks();
+        items.printTheListOfBooks();
         System.out.print("Select book from list: ");
         int reads = read.nextInt();
-        //new Items().checkOutBook(reads);
-         new Items().bookToBeCheckedOut(reads, items);
+        new Items().bookToBeCheckedOut(reads, items);
+    }
+
+    static void bookToBeReturned(Items items) {
+        Scanner read = new Scanner(System.in);
+        System.out.print("Enter title of book to return: ");
+        String title = read.nextLine();
+        new Items().bookToBeReturned(title, items);
     }
 
 }

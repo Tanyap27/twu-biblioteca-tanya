@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bb51030-e16a-49f3-9d41-3c7a2ac4aa23" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/bookListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Items.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Items.class" afterDir="false" />
@@ -63,7 +64,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuOptionsTest.shouldCheckoutTheBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="bookListTest.shouldGetTheAuthor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
@@ -72,14 +73,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.MenuOptionsTest" />
-      <option name="METHOD_NAME" value="shouldCheckoutTheBook" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.bookListTest" />
+      <option name="METHOD_NAME" value="shouldGetTheAuthor" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuOptionsTest.shouldDisplayAllTheOptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="bookListTest.shouldGetTheBookId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
@@ -88,14 +89,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.MenuOptionsTest" />
-      <option name="METHOD_NAME" value="shouldDisplayAllTheOptions" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.bookListTest" />
+      <option name="METHOD_NAME" value="shouldGetTheBookId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuOptionsTest.shouldGetTheListOfBooks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="bookListTest.shouldGetTheBookName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
@@ -104,14 +105,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.MenuOptionsTest" />
-      <option name="METHOD_NAME" value="shouldGetTheListOfBooks" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.bookListTest" />
+      <option name="METHOD_NAME" value="shouldGetTheBookName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuOptionsTest.shouldNotCheckoutTheBookWhenLessThan1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="bookListTest.shouldGetThePublicationYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
@@ -120,8 +121,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.MenuOptionsTest" />
-      <option name="METHOD_NAME" value="shouldNotCheckoutTheBookWhenLessThan1" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.bookListTest" />
+      <option name="METHOD_NAME" value="shouldGetThePublicationYear" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,10 +131,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BibliotecaApp" />
-        <item itemvalue="JUnit.MenuOptionsTest.shouldNotCheckoutTheBookWhenLessThan1" />
-        <item itemvalue="JUnit.MenuOptionsTest.shouldCheckoutTheBook" />
-        <item itemvalue="JUnit.MenuOptionsTest.shouldGetTheListOfBooks" />
-        <item itemvalue="JUnit.MenuOptionsTest.shouldDisplayAllTheOptions" />
+        <item itemvalue="JUnit.bookListTest.shouldGetTheBookId" />
+        <item itemvalue="JUnit.bookListTest.shouldGetThePublicationYear" />
+        <item itemvalue="JUnit.bookListTest.shouldGetTheAuthor" />
+        <item itemvalue="JUnit.bookListTest.shouldGetTheBookName" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +159,7 @@
       <workItem from="1581261614273" duration="130000" />
       <workItem from="1581261774426" duration="663000" />
       <workItem from="1581262687747" duration="3000" />
-      <workItem from="1581262711126" duration="1258000" />
+      <workItem from="1581262711126" duration="4304000" />
     </task>
     <servers />
   </component>

@@ -32,11 +32,22 @@ public class Items {
                 return null;
             }
             bookList rentedBook = items.listOfAvailableBooks.remove(chosenOption-1);
-            rentedBookList.add(rentedBook);
+            items.rentedBookList.add(rentedBook);
             System.out.println("Thank you! Enjoy the book");
             return rentedBook;
         }
 
+        public void bookToBeReturned(String title, Items items) {
+            for (bookList bookList : items.rentedBookList) {
+                if (bookList.getTitle().equals(title)) {
+                    items.rentedBookList.remove(bookList);
+                    items.listOfAvailableBooks.add(bookList);
+                    System.out.println("Thank you for returning the book");
+                    return;
+                }
+            }
+            System.out.println("That is not a valid book to return");
+        }
     }
 
 

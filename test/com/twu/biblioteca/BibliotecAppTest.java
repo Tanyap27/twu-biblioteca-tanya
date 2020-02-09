@@ -22,7 +22,7 @@ public class BibliotecAppTest {
     }
 
     @Test
-    public void greetingsTest() {
+    public void shouldPrintTheGreetings() {
         String welcome = "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";
         //assertEquals(welcome, BibliotecaApp.greetings());
         assertThat(BibliotecaApp.greetings(), is(welcome));
