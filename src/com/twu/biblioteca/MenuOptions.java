@@ -1,15 +1,16 @@
 package com.twu.biblioteca;
 
-import java.util.*;
 import com.twu.biblioteca.Items;
+import java.util.Scanner;
 
 public class MenuOptions {
 
     private static String[] options;
+    private static MenuOptions menuOptions = new MenuOptions(
+                    "To open the book menu, please select 1", "To checkout a book, select 2", "To return a book, select 3", "To quit, please select 4");
 
     public MenuOptions(String... options) {
-
-        this.options = options;
+        MenuOptions.options = options;
     }
 
     public void printTheOptions() {
@@ -18,106 +19,31 @@ public class MenuOptions {
         }
     }
 
-    public String getOption(int choice) {
-        if (choice < 0 || choice > options.length) {
-            return "";
+    public String getOption(int chosenOption) {
+        if (chosenOption < 1 || chosenOption > options.length) {
+            return "This is not a valid option";
         }
-        return this.options[choice-1];
+        return options[chosenOption-1];
     }
 
-     /*static String getMenuOption() {
-
+    //get the options
+     static String getMenuOption() {
         //to read the option
         Scanner read = new Scanner(System.in);
-        //printTheOptions();
+        menuOptions.printTheOptions();
         System.out.println("Select the Option");
         int reads = read.nextInt();
-        return getOption(reads);
-        }
+        return menuOptions.getOption(reads);
+     }
 
-     static void bookToBeCheckedOut(){
-        Scanner sc = new Scanner(System.in);
-        //Items.getTheListOfBooks();
+     static void bookToBeCheckedOut(Items items){
+        Scanner read = new Scanner(System.in);
+        //new BibliotecaApp().getTheBooksList();
+         items.printTheListOfBooks();
         System.out.print("Select book from list: ");
-        int in = sc.nextInt();
-        //Items.bookToBeCheckedOut(in);
+        int reads = read.nextInt();
+        //new Items().checkOutBook(reads);
+         new Items().bookToBeCheckedOut(reads, items);
     }
-
-    public void menuOptions() {
-
-        //different options present
-        while(true) {
-            String menuOption = getMenuOption();
-
-            if (menuOption.equals("To open the book menu, please select 1")) {
-               // Items.getTheListOfBooks();
-
-            } else if (menuOption.equals("To checkout, select 2")) {
-                bookToBeCheckedOut();
-
-            } else if (menuOption.equals("To quit, please select 3")) {
-                System.exit(0);
-
-            } else {
-                System.out.println(menuOption);
-
-            }
-
-            System.out.println();
-        }
-
-    }
-
-    /*public static void bookToBeCheckedOut() {
-
-        List<bookList> listOfTheBooks = getTheBooksList();
-        String message = "Select the id of the book to be checked out\n" + listOfTheBooks.toString();
-
-        int option = readConsoleInput(message);
-
-         for(int i = 0; i < listOfTheBooks.size(); i ++) {
-            bookList bookList = listOfTheBooks.get(i);
-            System.out.println(bookList);
-
-            if(bookList.getId() == option && !bookList.getAvailablity()) {
-                bookList.setAvailability(true);
-                System.out.println("Thank you!Enjoy the book");
-                return;
-
-            } else if(bookList.getId() != option){
-                System.out.println("Sorry, that book is not available");
-                return;
-            }
-        }
-
-    }
-
-
-    public static void selectOptions(int option) {
-
-        //different menu options present
-        String message = "";
-        if (option == 1) {
-            message += getTheBooksList();
-
-        } else if (option == 2) {
-            bookToBeCheckedOut();
-
-        } else if (option == 3) {
-            System.out.println("Exiting the application");
-            System.exit(1);
-
-        } else {
-            System.err.println("Invalid option");
-
-            System.out.println(message);
-
-        }
-
-    }
-
-    public static void theMenu() {
-        selectOptions(readConsoleInput(menuOptions));
-    }*/
 
 }

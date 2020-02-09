@@ -29,18 +29,4 @@ public class BibliotecAppTest {
 
     }
 
-
-    @Test
-    public void shouldGetTheListOfBooks() { //item.getTheListOfBooks();
-        Items item = new Items(
-                new bookList("The Da Vince Code", "Dan Brown", 2000, 12),
-                new bookList("Harry Potter", "J.K. Rowling", 2001, 13),
-                new bookList("Shiva", "Amit Trivedi", 2002, 14),
-                new bookList("Mythos", "Stephen Fry", 2003, 15)
-        );
-        item.getTheListOfBooks();
-        assertEquals("The Da Vince Code | Dan Brown | 2000 | 12\nHarry Potter | J.K. Rowling | 2001 | 13\nShiva | Amit Trivedi | 2002 | 14\nMythos | Stephen Fry | 2003 | 15\n",
-                output.toString());
-    }
-
 }
