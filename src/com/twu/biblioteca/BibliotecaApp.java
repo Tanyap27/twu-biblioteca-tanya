@@ -8,7 +8,6 @@ public class BibliotecaApp {
     static String greetings() {
         return ( "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
     }
-
         //get the list of books from bookList
        private static Items item = new Items (
                 new bookList("The Da Vince Code", "Dan Brown", 2000, 12),
