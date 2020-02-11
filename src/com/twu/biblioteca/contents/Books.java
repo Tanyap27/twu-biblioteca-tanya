@@ -1,6 +1,6 @@
 package com.twu.biblioteca.contents;
 
-public class bookList {
+public class Books {
 
     //declare the variables
     private String title;
@@ -12,7 +12,7 @@ public class bookList {
     private int id;
 
     //constructor to change the variable
-    public bookList(String title, String author, int publicationYear, int id) {
+    public Books(String title, String author, int publicationYear, int id) {
         this.title = title;
         this.author = author;
         this.publicationYear = publicationYear;

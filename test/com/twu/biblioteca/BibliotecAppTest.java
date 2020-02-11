@@ -3,7 +3,6 @@ package com.twu.biblioteca;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.twu.biblioteca.contents.bookList;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import java.io.ByteArrayOutputStream;

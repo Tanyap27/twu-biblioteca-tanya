@@ -7,7 +7,7 @@ public class MenuOptions {
 
     private static String[] options;
     private static MenuOptions menuOptions = new MenuOptions(
-                    "To open the book menu, please select 1", "To checkout a book, select 2", "To return a book, select 3", "To quit, please select 4");
+                    "To open the book menu, please select 1", "To checkout a book, select 2", "To return a book, select 3", "To open the movie menu, please select 4","To checkout a movie, select 5","To quit, please select 6");
 
     public MenuOptions(String... options) {
         MenuOptions.options = options;
@@ -41,14 +41,22 @@ public class MenuOptions {
         items.printTheListOfBooks();
         System.out.print("Select book from list: ");
         int reads = read.nextInt();
-        new Items().bookToBeCheckedOut(reads, items);
+        Items.bookToBeCheckedOut(reads, items);
     }
 
     static void bookToBeReturned(Items items) {
         Scanner read = new Scanner(System.in);
         System.out.print("Enter title of book to return: ");
         String title = read.nextLine();
-        new Items().bookToBeReturned(title, items);
+        Items.bookToBeReturned(title, items);
+    }
+
+    static void movieToBeCheckedOut(Items items) {
+        Scanner read = new Scanner(System.in);
+        items.printTheListOfMovies();
+        System.out.println("Select movie from the list:");
+        int reads = read.nextInt();
+        Items.moviesToBeCheckedOut(reads,items);
     }
 
 }

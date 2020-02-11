@@ -1,22 +1,30 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.contents.bookList;
+import com.twu.biblioteca.contents.Books;
+import com.twu.biblioteca.contents.Movies;
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Items {
 
-        private  ArrayList<bookList> listOfAvailableBooks;
-        private  ArrayList<bookList> rentedBookList;
+        private ArrayList<Books> listOfAvailableBooks;
+        private ArrayList<Books> rentedBooks;
+        private ArrayList<Movies> listOfAvailableMovies;
+        private ArrayList<Movies> rentedMovies;
 
-        public Items(bookList... booksLists) {
-            listOfAvailableBooks = new ArrayList<bookList>(Arrays.asList(booksLists));
-            rentedBookList = new ArrayList<bookList>();
+        public Items(Books... books) {
+            listOfAvailableBooks = new ArrayList<Books>(Arrays.asList(books));
+            rentedBooks = new ArrayList<Books>();
         }
 
-        public ArrayList<bookList> getBookList(Items items) {
+        public Items(Movies... Movies) {
+            listOfAvailableMovies = new ArrayList<Movies>(Arrays.asList(Movies));
+            rentedMovies = new ArrayList<Movies>();
+        }
+
+
+        public ArrayList<Books> getBookList(Items items) {
             return items.listOfAvailableBooks;
         }
 
@@ -26,22 +34,22 @@ public class Items {
             }
         }
 
-        public bookList bookToBeCheckedOut(int chosenOption, Items items) {
+        public static Books bookToBeCheckedOut(int chosenOption, Items items) {
             if (chosenOption <= 0 || chosenOption > items.listOfAvailableBooks.size()) {
                 System.out.println("Sorry, that book is not available");
                 return null;
             }
-            bookList rentedBook = items.listOfAvailableBooks.remove(chosenOption-1);
-            items.rentedBookList.add(rentedBook);
+            Books rentedBook = items.listOfAvailableBooks.remove(chosenOption-1);
+            items.rentedBooks.add(rentedBook);
             System.out.println("Thank you! Enjoy the book");
             return rentedBook;
         }
 
-        public void bookToBeReturned(String title, Items items) {
-            for (bookList bookList : items.rentedBookList) {
-                if (bookList.getTitle().equals(title)) {
-                    items.rentedBookList.remove(bookList);
-                    items.listOfAvailableBooks.add(bookList);
+        public static void bookToBeReturned(String title, Items items) {
+            for (Books Books : items.rentedBooks) {
+                if (Books.getTitle().equals(title)) {
+                    items.rentedBooks.remove(Books);
+                    items.listOfAvailableBooks.add(Books);
                     System.out.println("Thank you for returning the book");
                     return;
                 }
@@ -49,7 +57,27 @@ public class Items {
             System.out.println("That is not a valid book to return");
         }
 
+        public ArrayList<Movies> getMovieList(Items items) {
+            return items.listOfAvailableMovies;
+        }
 
-    }
+        public  void printTheListOfMovies() {
+            for (int i = 0; i < listOfAvailableMovies.size(); i++) {
+                System.out.println(i+1 + ". " + listOfAvailableMovies.get(i).toString());
+            }
+        }
+
+        public static Movies moviesToBeCheckedOut(int chosenOption, Items items) {
+            if(chosenOption <= 0 || chosenOption > items.listOfAvailableMovies.size()) {
+                System.out.println("Sorry that book is not available");
+                return null;
+            }
+            Movies rentedMovie = items.listOfAvailableMovies.remove(chosenOption-1);
+            items.rentedMovies.add(rentedMovie);
+            System.out.println("Thank you! Enjoy the movie");
+            return rentedMovie;
+            }
+        }
+
 
 

@@ -1,6 +1,6 @@
 package com.twu.biblioteca.contents;
 
-public class movieList {
+public class Movies {
 
     //declare the variables
     private String name;
@@ -12,7 +12,7 @@ public class movieList {
     private int rating;
 
     //constructor to change the variable
-    public movieList(String name, int year, String director, int rating) {
+    public Movies(String name, int year, String director, int rating) {
         this.name = name;
         this.year = year;
         this.director = director;

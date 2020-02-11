@@ -1,39 +1,37 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.contents.movieList;
+import com.twu.biblioteca.contents.Movies;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 import static org.junit.Assert.assertEquals;
 
 public class MovieListTest {
 
-    private movieList movieList;
+    private Movies Movies;
 
     @Before
     public void beforEveryTest() {
-        movieList = new movieList("Movie1", 2001, "Director1", 7);
+        Movies = new Movies("Movie1", 2001, "Director1", 7);
     }
 
     @Test
     public void shouldGetTheMovieName() {
-        assertEquals("Movie1", movieList.getName());
+        assertEquals("Movie1", Movies.getName());
     }
 
     @Test
     public void shouldGetTheMovieYear() {
-        assertEquals(2001, movieList.getYear());
+        assertEquals(2001, Movies.getYear());
     }
 
     @Test
     public void shouldGetTheMovieDirector() {
-        assertEquals("Director1", movieList.getDirector());
+        assertEquals("Director1", Movies.getDirector());
     }
 
     @Test
     public void shouldGetTheMovieRating() {
-        assertEquals(7, movieList.getRating());
+        assertEquals(7, Movies.getRating());
     }
 }
