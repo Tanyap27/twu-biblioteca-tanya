@@ -2,6 +2,7 @@ package com.twu.biblioteca;
 
 import com.twu.biblioteca.contents.Books;
 import com.twu.biblioteca.contents.Movies;
+import com.twu.biblioteca.contents.Users;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,17 +13,21 @@ public class Items {
         private ArrayList<Books> rentedBooks;
         private ArrayList<Movies> listOfAvailableMovies;
         private ArrayList<Movies> rentedMovies;
+        private ArrayList<Users> listOfUsers;
 
         public Items(Books... books) {
             listOfAvailableBooks = new ArrayList<Books>(Arrays.asList(books));
             rentedBooks = new ArrayList<Books>();
         }
 
-        public Items(Movies... Movies) {
-            listOfAvailableMovies = new ArrayList<Movies>(Arrays.asList(Movies));
+        public Items(Movies... movies) {
+            listOfAvailableMovies = new ArrayList<Movies>(Arrays.asList(movies));
             rentedMovies = new ArrayList<Movies>();
         }
 
+        public Items(Users... users) {
+            listOfUsers = new ArrayList<Users>();
+        }
 
         public ArrayList<Books> getBookList(Items items) {
             return items.listOfAvailableBooks;

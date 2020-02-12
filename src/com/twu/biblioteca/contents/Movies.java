@@ -20,7 +20,6 @@ public class Movies {
 
     }
 
-    //return the input given by user
     public String getName() {
         return name;
     }
@@ -37,7 +36,6 @@ public class Movies {
         return rating;
     }
 
-    //returns details of the books
     public String toString()
     {
         return this.name + " | " + this.year + " | "  + this.director + " | " + this.rating;

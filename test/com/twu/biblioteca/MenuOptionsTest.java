@@ -78,7 +78,6 @@ public class MenuOptionsTest {
         assertEquals("Thank you! Enjoy the book\nThank you for returning the book\n", output.toString());
     }
 
-
     @Test
     public void shouldShowTheMovieListWhenOptionIs4() {
         Items item = new Items(

@@ -6,6 +6,10 @@ public class BibliotecaApp {
         return ( "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
     }
 
+    private static Items items;
+    private static MenuOptions menuOptions;
+    private static Login login;
+
     public static void main(String[] args) {
 
         System.out.println(greetings());
@@ -20,14 +24,17 @@ public class BibliotecaApp {
                 MenuOptions.bookToBeCheckedOut(StoreManager.book);
 
             } else if (Option.equals("To return a book, select 3")) {
-                MenuOptions.bookToBeReturned(StoreManager.book);
+                menuOptions.bookToBeReturned(StoreManager.book);
 
             }
             else if (Option.equals("To open the movie menu, please select 4")) {
                 StoreManager.movie.printTheListOfMovies();
             }
             else if (Option.equals("To checkout a movie, select 5")) {
-                MenuOptions.movieToBeCheckedOut(StoreManager.movie);
+                menuOptions.movieToBeCheckedOut(StoreManager.movie);
+
+            } else if (Option.equals("To view User Information, please select 6")) {
+                menuOptions.printUserInfo();
 
             } else if (Option.equals("To quit, please select 6")) {
                 System.exit(0);
