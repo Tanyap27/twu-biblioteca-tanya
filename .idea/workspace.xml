@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bb51030-e16a-49f3-9d41-3c7a2ac4aa23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/contents/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Items.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Items.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/MenuOptions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/MenuOptions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/StoreManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/StoreManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/contents/Movies.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/contents/Movies.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/MenuOptionsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/MenuOptionsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/contents/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/contents/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/LoginTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/MenuOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/MenuOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/StoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/StoreManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/contents/Movies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/contents/Movies.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuOptionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/MenuOptionsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/contents/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/contents/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/LoginTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +162,7 @@
       <workItem from="1581262687747" duration="3000" />
       <workItem from="1581262711126" duration="21167000" />
       <workItem from="1581418289971" duration="10189000" />
-      <workItem from="1581461527651" duration="3338000" />
+      <workItem from="1581461527651" duration="5084000" />
     </task>
     <servers />
   </component>

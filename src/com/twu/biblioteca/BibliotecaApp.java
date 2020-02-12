@@ -6,9 +6,9 @@ public class BibliotecaApp {
         return ( "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
     }
 
-    private static Items items;
     private static MenuOptions menuOptions;
     private static Login login;
+
 
     public static void main(String[] args) {
 

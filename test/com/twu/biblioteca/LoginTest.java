@@ -19,7 +19,6 @@ public class LoginTest {
 
     @Test
     public void shouldReturnTheUserCredentials() {
-        System.out.println(firstUser);
         login.loggingIn("000-0001", "pass1");
         assertEquals(firstUser, login.getTheLoggedInUser());
     }

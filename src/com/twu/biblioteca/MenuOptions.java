@@ -2,13 +2,15 @@ package com.twu.biblioteca;
 
 import com.twu.biblioteca.Items;
 import com.twu.biblioteca.Login;
+
 import java.util.Scanner;
 
 
 public class MenuOptions {
 
+    private static Login login;
     private static String[] options;
-    private static MenuOptions loggendInMenuOptions = new MenuOptions(
+    private static MenuOptions loggedInMenuOptions = new MenuOptions(
                     "To open the book menu, please select 1", "To checkout a book, select 2", "To return a book, select 3", "To open the movie menu, please select 4",
             "To checkout a movie, select 5","To view User Information, please select 6","To quit, please select 6");
 
@@ -29,14 +31,23 @@ public class MenuOptions {
         return options[chosenOption-1];
     }
 
+    private static void loggingIn() {
+        Scanner read = new Scanner(System.in);
+        System.out.print("Enter libraryNumber: ");
+        String libraryNumber = read.nextLine();
+        System.out.print("Enter password: ");
+        String password = read.nextLine();
+        login.loggingIn(libraryNumber, password);
+    }
+
     //get the options
      static String getMenuOption() {
         //to read the option
         Scanner read = new Scanner(System.in);
-        loggendInMenuOptions.printTheOptions();
+        loggedInMenuOptions.printTheOptions();
         System.out.println("Select the Option");
         int reads = read.nextInt();
-        return loggendInMenuOptions.getOption(reads);
+        return loggedInMenuOptions.getOption(reads);
      }
 
      static void bookToBeCheckedOut(Items items){
@@ -63,9 +74,7 @@ public class MenuOptions {
     }
 
      static void printUserInfo() {
-        if (new Login().getTheLoggedInUser() != null) {
-            System.out.println(new Login().getTheLoggedInUser().toString());
-        }
+
     }
 
 }

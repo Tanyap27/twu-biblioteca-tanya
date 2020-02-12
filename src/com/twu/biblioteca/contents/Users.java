@@ -30,4 +30,8 @@ public class Users {
         return password;
     }
 
+    public String displayUser() {
+        return this.libraryNumber +  " | " + this.password;
+    }
+
 }

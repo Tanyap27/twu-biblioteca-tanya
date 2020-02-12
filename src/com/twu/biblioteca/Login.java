@@ -21,6 +21,16 @@ public class Login {
     }
 
     public void loggingIn(String libraryNumber, String password) {
+        Users loggingInUser = mapUserList.get(libraryNumber);
+        if (loggingInUser != null && loggingInUser.getPassword().equals(password)) {
+            this.theLoggedInUser = loggingInUser;
+        } else {
+            this.theLoggedInUser = null;
+        }
+    }
+
+    public boolean isLoggedIn() {
+        return this.theLoggedInUser != null;
     }
 
 }
