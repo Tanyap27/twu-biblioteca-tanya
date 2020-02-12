@@ -33,8 +33,8 @@ public class BibliotecaApp {
             else if (Option.equals("To checkout a movie, select 5")) {
                 menuOptions.movieToBeCheckedOut(StoreManager.movie);
 
-            } else if (Option.equals("To view User Information, please select 6")) {
-                menuOptions.printUserInfo();
+            } else if (Option.equals("Login")) {
+                menuOptions.loggingIn();
 
             } else if (Option.equals("To quit, please select 6")) {
                 System.exit(0);
